@@ -15,7 +15,7 @@ namespace image2meshinelearning.Controllers
     public class FileUploadController : ControllerBase
     {
         [HttpPost]
-        public IActionResult File(IFormFile file)
+        public ActionResult File(IFormFile file)
         {
             //Console.WriteLine
             IFormFile file2 = null;
@@ -25,7 +25,7 @@ namespace image2meshinelearning.Controllers
             {
                 //work
                 Console.WriteLine("read file");
-                var tmpPath = ".\\abc.png";
+                var tmpPath = "./abc.png";
                 using (var fileStream = System.IO.File.Exists(tmpPath) ? System.IO.File.Open(tmpPath, FileMode.Append) : System.IO.File.Open(tmpPath, FileMode.CreateNew))
                 {
                     file.CopyTo(fileStream);
