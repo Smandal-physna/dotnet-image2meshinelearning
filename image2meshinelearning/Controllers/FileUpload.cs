@@ -15,7 +15,7 @@ namespace image2meshinelearning.Controllers
     public class FileUploadController : ControllerBase
     {
         [HttpPost]
-        public ActionResult File(IFormFile file)
+        public IActionResult File(IFormFile file)
         {
             //Console.WriteLine
             IFormFile file2 = null;
